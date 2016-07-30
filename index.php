@@ -7,6 +7,10 @@ use Mindk\Blog\Category;
 
 require_once 'autoload.php';
 
+$loader = new autoload();
+$loader->addPrefix('Mindk\\Blog', 'vendor/Mindk/Blog');
+$loader->register();
+
 // Creating some dummy content:
 $article = new Article('Lorem Ipsum', 'Lorem ipsum dolor sit amet...');
 $video = new Video('Some inspiring video', 'https://www.youtube.com/embed/H_i1YZS7GQQ');
